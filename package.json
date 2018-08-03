@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^16.6.2",
+    "hapi-sequelize": "^3.0.4",
+    "joi-json": "^2.0.1",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.26.0",
+    "sequelize-cli": "^3.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://minal-chavan@bitbucket.org/minal-chavan/project.git"
+  },
+  "homepage": "https://bitbucket.org/minal-chavan/project#readme",
+  "description": ""
+}
