@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   ledger.associate = function(models) {
     
     ledger.student_id=ledger.belongsTo(models.student,{foreignKey: 'student_id',target_Key:'student_id'})
-    ledger.book_id=ledger.belongsTo(models.student,{foreignKey: 'book_id',target_Key:'book_id'})
+    ledger.book_id=ledger.belongsTo(models.book,{foreignKey: 'book_id',target_Key:'book_id'})
    
   };
 
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
 }
 
 ledger.findAllEntry=function(){
-  return ledger.findAll({include:[{association:ledger.student_id}]}).then(data=>{return (data)});
+  return ledger.findAll({include:[{association:ledger.student_id},{association:ledger.book_id}]}).then(data=>{return (data)});
   
 }
 ledger.findAllById=function(student_id){
