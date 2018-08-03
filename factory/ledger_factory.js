@@ -7,7 +7,7 @@ var ledger = models.ledger;
 //var log = new Logger('students');
 
 class Ledgers{
-
+ 
     init(data) {
 //        super.init(data.item_type_id);
         this.data = data;

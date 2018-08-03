@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
 }
 
 ledger.findAllEntry=function(){
-  return ledger.findAll().then(data=>{return (data)});
+  return ledger.findAll({include:[{association:ledger.student_id}]}).then(data=>{return (data)});
   
 }
 ledger.findAllById=function(student_id){
