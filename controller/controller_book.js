@@ -1,4 +1,7 @@
 var Book=require('./../factory/book_factory.js');
+var logger=require('./../utils/loggers.js');
+
+var log=new logger('book_controller')
 module.exports={
 
 findAllBook:{
@@ -24,7 +27,7 @@ addBook: {
                 book.addBook(data).then(function (result) {
                     reply(result);
                 }).catch(function (insertError) {
-                   // log.e(insertError);
+                    log.error(insertError);
                     reply(insertError);
                 });
             }
@@ -42,7 +45,7 @@ addBook: {
                 //console.log(result)
                 reply(result);
             }).catch(function (bookError) {
-                //log.e(bookError);
+                log.error(bookError);
                 reply(bookError);
             });
         }
@@ -60,7 +63,7 @@ updateBook: {
                 book.updateBook(queryParams.book_name,data).then(function (result) {
                     reply(result);
                 }).catch(function (insertError) {
-                   // log.e(insertError);
+                    log.error(insertError); 
                     reply(insertError);
                 });
             }

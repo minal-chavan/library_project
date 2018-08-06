@@ -1,4 +1,6 @@
 var Ledger=require('./../factory/ledger_factory.js');
+var logger=require('./../utils/loggers.js')
+
 module.exports={
 
 findAllEntry:{
@@ -24,7 +26,7 @@ addEntry: {
                 ledger.addEntry(data).then(function (result) {
                     reply(result);
                 }).catch(function (insertError) {
-                   // log.e(insertError);
+                    log.e(insertError);
                     reply(insertError);
                 });
             }
@@ -42,7 +44,7 @@ addEntry: {
                 //console.log(result)
                 reply(result);
             }).catch(function (bookError) {
-                //log.e(customerError);
+                log.e(customerError);
                 reply(bookError);
             });
         }
@@ -60,7 +62,7 @@ updateEntry: {
                 ledger.updateEntry(data,queryParams.student_id).then(function (result) {
                     reply(result);
                 }).catch(function (insertError) {
-                   // log.e(insertError);
+                    log.e(insertError);
                     reply(insertError);
                 });
             }
@@ -73,7 +75,7 @@ updateEntry: {
 }
 
 
-var retriveData = function (payload) {
+var retriveData = function (payload) { 
     var data = {}; 
     if (typeof payload == "string") {
         data = JSON.parse(payload);
