@@ -1,7 +1,5 @@
 'use strict'
 var models = require('./../models');
-//var Logger = require('./../utils/logger');
-//var ItemType = require('./item_type_factory.js');
 
 var book = models.book;
 //var log = new Logger('students');
@@ -9,7 +7,7 @@ var book = models.book;
 class Books  {
 
     init(data) {
-//        super.init(data.item_type_id);
+
         this.data = data;
     }
 

@@ -42,7 +42,7 @@ addBook: {
                 //console.log(result)
                 reply(result);
             }).catch(function (bookError) {
-                //log.e(customerError);
+                //log.e(bookError);
                 reply(bookError);
             });
         }
