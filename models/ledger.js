@@ -35,7 +35,7 @@ ledger.findAllEntry=function(){
 ledger.findAllById=function(student_id){
   
   //console.log(queryName)
-  return ledger.findAll({where:{student_id:student_id}
+  return ledger.findAll({include:[{association:ledger.student_id},{association:ledger.book_id}]},{where:{student_id:student_id}
 
   //include:[{assosiation:ledger.student_id}]
 
