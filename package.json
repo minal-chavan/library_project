@@ -9,10 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "design": "^0.1.0",
+    "design-pattern": "0.0.21",
     "hapi": "^16.6.2",
     "hapi-sequelize": "^3.0.4",
     "joi-json": "^2.0.1",
     "mysql2": "^1.5.1",
+    "node-google-calendar": "^1.1.1",
+    "pattern": "^0.2.0",
     "sequelize": "^4.26.0",
     "sequelize-cli": "^3.2.0"
   },

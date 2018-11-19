@@ -1,15 +1,15 @@
-'use strict';
+ 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var student = sequelize.define('student', {
     student_id: {
-  type: DataTypes.INTEGER,
+          type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
             field: 'student_id'},
     student_name: DataTypes.STRING,
     student_email: DataTypes.STRING,
     student_address: DataTypes.STRING
-  }, {});
+  }, {}); 
   student.associate = function(models) {
     // associations can be defined here
      student.hasMany(models.ledger,{foreignKey:'student_id'})
@@ -27,7 +27,7 @@ student.findAllStudent=function(){
 });
 }
 student.findAllByName=function(student_name){
-	var queryName = '%' + book_name + '%';
+	var queryName = '%' + student_name + '%';
   console.log(queryName)
 	return student.findAll({
 	where:{'student_name' :{

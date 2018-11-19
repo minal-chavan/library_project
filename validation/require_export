@@ -1,0 +1,7 @@
+
+modeule include in require()
+will first search in packege.json
+then index.js
+and at last index.node();
+
+

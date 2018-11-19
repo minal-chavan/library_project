@@ -26,7 +26,7 @@ addEntry: {
                 ledger.addEntry(data).then(function (result) {
                     reply(result);
                 }).catch(function (insertError) {
-                   // log.e(insertError);
+                //    log.e(insertError);
                     reply(insertError);
                 });
             }
@@ -44,7 +44,7 @@ addEntry: {
                 //console.log(result)
                 reply(result);
             }).catch(function (bookError) {
-                //log.e(customerError);
+               // log.e(customerError);
                 reply(bookError);
             });
         }
@@ -62,7 +62,7 @@ updateEntry: {
                 ledger.updateEntry(data,queryParams.student_id).then(function (result) {
                     reply(result);
                 }).catch(function (insertError) {
-                  //  log.e(insertError);
+                 //   log.e(insertError);
                     reply(insertError);
                 });
             }

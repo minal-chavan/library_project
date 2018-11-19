@@ -24,7 +24,7 @@ addStudent: {
                 student.addStudent(data).then(function (result) {
                     reply(result);
                 }).catch(function (insertError) {
-                    log.error(insertError);
+                //    log.error(insertError);
                     reply(insertError);
                 });
             }
@@ -41,7 +41,7 @@ addStudent: {
             student.findAllByName(queryParams.student_name).then(function (result) {
                 reply(result);
             }).catch(function (studentError) {
-                log.error(customerError);
+                //log.error(customerError);
                 reply(studentError);
             });
         }
@@ -59,7 +59,7 @@ addStudent: {
                 student.updateStudent(queryParams.student_name,data).then(function (result) {
                     reply(result);
                 }).catch(function (insertError) {
-                    log.error(insertError);
+                  //  log.error(insertError);
                     reply(insertError);
                 });
             }
