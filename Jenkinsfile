@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+		echo "Multiline shell steps works too"
                 sh 'npm --version'
             }
         }
